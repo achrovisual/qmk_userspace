@@ -61,9 +61,10 @@ static bool HOLOGRAPHICS_UNDERGLOW(effect_params_t* params) {
                 rgb_matrix_set_color(i, 0x00, 0x85, 0xff);
             } else if (i == 76 || i == 86) {
                 rgb_matrix_set_color(i, 0x00, 0xb2, 0xff);
-            } else {
-                rgb_matrix_set_color(i, 0x00, 0x00, 0x00);
             }
+        }
+        else {
+            rgb_matrix_set_color(i, 0x00, 0x00, 0x00);
         }
     }
     return rgb_matrix_check_finished_leds(led_max);
