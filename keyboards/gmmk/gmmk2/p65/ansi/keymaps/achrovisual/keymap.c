@@ -46,10 +46,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Turns side LEDs to white for caps lock and layer indicators.
 bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     if (host_keyboard_led_state().caps_lock || get_highest_layer(layer_state | default_layer_state)) {
-        for (uint8_t i = led_min; i < led_max; i++) {
-            if (HAS_FLAGS(g_led_config.flags[i], 0x02)) { // 0x02 == LED_FLAG_UNDERGLOW
-                rgb_matrix_set_color(i, 0xff, 0xff, 0xff);
-            }
+        for (uint8_t i = 67; i <= 86; i++) {
+            rgb_matrix_set_color(i, 0xff, 0xff, 0xff);
         }
     }
     return false;
