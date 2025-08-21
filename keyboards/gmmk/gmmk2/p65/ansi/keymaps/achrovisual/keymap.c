@@ -23,6 +23,11 @@ enum custom_layers {
     _FL,
 };
 
+enum custom_keycodes {
+  // apple globe key
+  AP_GLOB = SAFE_RANGE,
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* Keymap _BL: Base Layer (Default Layer)
    */
